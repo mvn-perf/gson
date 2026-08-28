@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions xmlns="http://maven.apache.org/EXTENSIONS/1.2.0">
+
+  <!-- mvn-lens: JFR-based Maven build profiler used to monitor Gson's builds, see
+       https://github.com/mvn-perf/mvn-lens
+       It writes a report to `target/mvnlens/report.html` at the end of every Maven session.
+
+       Only SNAPSHOTs are published so far, to the Maven Central snapshot repository
+       (https://central.sonatype.com/repository/maven-snapshots/). Maven resolves core extensions
+       before it reads the project POM, so that repository cannot be declared in `pom.xml` for this
+       artifact; `.mvn/pom.xml` pre-resolves it into the local repository instead. See `.mvn/pom.xml`
+       and the "Pre-resolve the mvn-lens extension" steps in the GitHub workflows. -->
+  <extension>
+    <groupId>io.github.mvn-perf</groupId>
+    <artifactId>mvn-lens-extension</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </extension>
+
+</extensions>

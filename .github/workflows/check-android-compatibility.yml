@@ -35,6 +35,21 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
+      # Must run before any other Maven invocation: Maven loads the core extensions declared in `.mvn/extensions.xml`
+      # before it reads `pom.xml`, so the Maven Central snapshot repository providing mvn-lens cannot be declared
+      # there, see `.mvn/pom.xml`
+      - name: Pre-resolve the mvn-lens extension
+        working-directory: .mvn
+        run: mvn --update-snapshots dependency:resolve
+
       - name: Check Android compatibility
         run: |
           mvn compile animal-sniffer:check@check-android-compatibility -Dmaven.test.skip --projects '!metrics,!proto,!test-graal-native-image,!test-jpms,!test-shrinker'
+
+      # mvn-lens writes its report when the Maven session ends, also for a failed build
+      - name: Upload mvn-lens report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: mvn-lens-report-android-compatibility
+          path: target/mvnlens
