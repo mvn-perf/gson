@@ -97,6 +97,10 @@ mvn clean verify
 
 JDK 17 or newer is required for building, JDK 21 is recommended. Newer JDKs are currently not supported for building (but are supported when _using_ Gson).
 
+> [!NOTE]\
+> This fork monitors its builds with [mvn-lens](https://github.com/mvn-perf/mvn-lens), a Maven core extension declared in `.mvn/extensions.xml` which writes a build report to `target/mvnlens/report.html`.\
+> mvn-lens is only published as a snapshot, which Maven cannot resolve out of the box; before the first build, download it into the local repository by running `mvn --update-snapshots dependency:resolve` in the `.mvn` directory (see `.mvn/pom.xml`).
+
 ### Contributing
 
 See the [contributing guide](https://github.com/google/.github/blob/master/CONTRIBUTING.md).\

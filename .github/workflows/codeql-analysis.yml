@@ -58,6 +58,14 @@ jobs:
         # Run all security queries and maintainability and reliability queries
         queries: +security-and-quality
 
+    # Must run before any other Maven invocation: Maven loads the core extensions declared in `.mvn/extensions.xml`
+    # before it reads `pom.xml`, so the Maven Central snapshot repository providing mvn-lens cannot be declared
+    # there, see `.mvn/pom.xml`
+    - name: Pre-resolve the mvn-lens extension
+      if: ${{ matrix.language == 'java' }}
+      working-directory: .mvn
+      run: mvn --update-snapshots dependency:resolve
+
     # Only compile main sources, but ignore test sources because findings for them might not
     # be that relevant (though GitHub security view also allows filtering by source type)
     # Can replace this with github/codeql-action/autobuild action to run complete build
@@ -65,6 +73,14 @@ jobs:
       if: ${{ matrix.language == 'java' }}
       run: |
         mvn compile
+
+    # mvn-lens writes its report when the Maven session ends, also for a failed build
+    - name: Upload mvn-lens report
+      if: ${{ always() && matrix.language == 'java' }}
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+      with:
+        name: mvn-lens-report-codeql
+        path: target/mvnlens
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@7188fc363630916deb702c7fdcf4e481b751f97a  # v4.37.1
