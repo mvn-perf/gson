@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "repository": "mvn-perf/gson",
+  "serverUrl": "https://github.com",
+  "runId": 33985550780,
+  "runNumber": 6,
+  "runAttempt": 1,
+  "workflowRef": "mvn-perf/gson/.github/workflows/build.yml@refs/heads/main",
+  "jobKey": "build",
+  "jobId": 101358275583,
+  "jobName": "Build on JDK 17",
+  "jobUrl": "https://github.com/mvn-perf/gson/actions/runs/33985550780/job/101358275583",
+  "runnerName": "GitHub Actions 1000001652",
+  "stepNumber": 5,
+  "stepName": "Build with Maven",
+  "stepResolution": "job-name/report-time",
+  "label": null,
+  "key": "j101358275583-s5",
+  "collectedAt": "2026-09-05T18:58:37.141Z",
+  "reports": [
+    {
+      "file": "report.html",
+      "originalPath": "target/mvnlens/report.html",
+      "label": null,
+      "summary": {
+        "schemaVersion": 1,
+        "groupId": "com.google.code.gson",
+        "artifactId": "gson-parent",
+        "version": "2.14.1-SNAPSHOT",
+        "goals": [
+          "verify",
+          "javadoc:jar"
+        ],
+        "threads": 1,
+        "builderId": "singlethreaded",
+        "mavenVersion": "3.9.16",
+        "jdkVersion": "17.0.20.1",
+        "status": "OK",
+        "startedAt": 1788634627461,
+        "endedAt": 1788634714807,
+        "totalMs": 88962,
+        "wallMs": 87346,
+        "cpuMs": 29479,
+        "gcMs": 866,
+        "gcCount": 88,
+        "jitMs": 35676,
+        "c2Ms": 35676,
+        "downloadMs": 93674,
+        "downloadBytes": 137580966,
+        "downloadCount": 757,
+        "moduleCount": 8,
+        "slowestMojo": {
+          "plugin": "org.codehaus.mojo:exec-maven-plugin",
+          "goal": "java",
+          "phase": "package",
+          "executionId": "r8",
+          "moduleKey": "com.google.code.gson:test-shrinker:2.14.1-SNAPSHOT",
+          "durationMs": 18510
+        },
+        "slowestTest": {
+          "className": "com.google.gson.functional.MapTest",
+          "methodName": "testMapDeserializationWithUnquotedLongKeys",
+          "displayName": "testMapDeserializationWithUnquotedLongKeys(com.google.gson.functional.MapTest)",
+          "framework": "JUNIT4",
+          "durationMs": 399
+        },
+        "testCount": 20,
+        "testMs": 1271,
+        "issueCount": 0,
+        "issueSeverities": {},
+        "environment": {
+          "availableProcessors": 4,
+          "cpuCores": 2,
+          "cpuThreads": 4,
+          "memoryBytes": 16765374464,
+          "osName": "DISTRIB_ID=Ubuntu",
+          "jvmName": "OpenJDK 64-Bit Server VM",
+          "jvmVendor": "Eclipse Adoptium",
+          "mvnd": false,
+          "githubActions": true,
+          "c2DisabledBy": null
+        }
+      },
+      "summarySource": "html",
+      "compressed": false,
+      "bytes": 1838803
+    }
+  ]
+}
