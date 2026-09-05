@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "repository": "mvn-perf/gson",
+  "serverUrl": "https://github.com",
+  "runId": 33985510138,
+  "runNumber": 4,
+  "runAttempt": 1,
+  "workflowRef": "mvn-perf/gson/.github/workflows/build.yml@refs/heads/build-monitor",
+  "jobKey": "build",
+  "jobId": 101358166182,
+  "jobName": "Build on JDK 11",
+  "jobUrl": "https://github.com/mvn-perf/gson/actions/runs/33985510138/job/101358166182",
+  "runnerName": "GitHub Actions 1000001626",
+  "stepNumber": 5,
+  "stepName": "Build with Maven",
+  "stepResolution": "job-name/report-time",
+  "label": null,
+  "key": "j101358166182-s5",
+  "collectedAt": "2026-09-05T18:56:19.359Z",
+  "reports": [
+    {
+      "file": "report.html",
+      "originalPath": "target/mvnlens/report.html",
+      "label": null,
+      "summary": {
+        "schemaVersion": 1,
+        "groupId": "com.google.code.gson",
+        "artifactId": "gson-parent",
+        "version": "2.14.1-SNAPSHOT",
+        "goals": [
+          "verify",
+          "javadoc:jar"
+        ],
+        "threads": 1,
+        "builderId": "singlethreaded",
+        "mavenVersion": "3.9.16",
+        "jdkVersion": "11.0.32",
+        "status": "OK",
+        "startedAt": 1788634512715,
+        "endedAt": 1788634576795,
+        "totalMs": 65207,
+        "wallMs": 64079,
+        "cpuMs": 27185,
+        "gcMs": 908,
+        "gcCount": 55,
+        "jitMs": 29824,
+        "c2Ms": 29824,
+        "downloadMs": 55868,
+        "downloadBytes": 101255651,
+        "downloadCount": 631,
+        "moduleCount": 6,
+        "slowestMojo": {
+          "plugin": "org.codehaus.mojo:exec-maven-plugin",
+          "goal": "java",
+          "phase": "package",
+          "executionId": "r8",
+          "moduleKey": "com.google.code.gson:test-shrinker:2.14.1-SNAPSHOT",
+          "durationMs": 17698
+        },
+        "slowestTest": {
+          "className": "com.google.common.collect.testing.testers.ListListIteratorTester",
+          "methodName": "testListIterator_fullyModifiable[JsonArray#asList [collection size: zero]]",
+          "displayName": "testListIterator_fullyModifiable[JsonArray#asList [collection size: zero]](com.google.common.collect.testing.testers.ListListIteratorTester)",
+          "framework": "JUNIT4",
+          "durationMs": 140
+        },
+        "testCount": 10,
+        "testMs": 976,
+        "issueCount": 0,
+        "issueSeverities": {},
+        "environment": {
+          "availableProcessors": 4,
+          "cpuCores": 16,
+          "cpuThreads": 4,
+          "memoryBytes": 16770748416,
+          "osName": "DISTRIB_ID=Ubuntu",
+          "jvmName": "OpenJDK 64-Bit Server VM",
+          "jvmVendor": "Eclipse Adoptium",
+          "mvnd": false,
+          "githubActions": true,
+          "c2DisabledBy": null
+        }
+      },
+      "summarySource": "html",
+      "compressed": false,
+      "bytes": 1801268
+    }
+  ]
+}
