@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "repository": "mvn-perf/gson",
+  "serverUrl": "https://github.com",
+  "runId": 33985522562,
+  "runNumber": 5,
+  "runAttempt": 1,
+  "workflowRef": "mvn-perf/gson/.github/workflows/build.yml@refs/pull/2/merge",
+  "jobKey": "build",
+  "jobId": 101358200381,
+  "jobName": "Build on JDK 25",
+  "jobUrl": "https://github.com/mvn-perf/gson/actions/runs/33985522562/job/101358200381",
+  "runnerName": "GitHub Actions 1000001644",
+  "stepNumber": 5,
+  "stepName": "Build with Maven",
+  "stepResolution": "job-name/report-time",
+  "label": null,
+  "key": "j101358200381-s5",
+  "collectedAt": "2026-09-05T18:57:26.212Z",
+  "reports": [
+    {
+      "file": "report.html",
+      "originalPath": "target/mvnlens/report.html",
+      "label": null,
+      "summary": {
+        "schemaVersion": 1,
+        "groupId": "com.google.code.gson",
+        "artifactId": "gson-parent",
+        "version": "2.14.1-SNAPSHOT",
+        "goals": [
+          "verify",
+          "javadoc:jar"
+        ],
+        "threads": 1,
+        "builderId": "singlethreaded",
+        "mavenVersion": "3.9.16",
+        "jdkVersion": "25.0.4.1",
+        "status": "OK",
+        "startedAt": 1788634563698,
+        "endedAt": 1788634643778,
+        "totalMs": 81131,
+        "wallMs": 80080,
+        "cpuMs": 29374,
+        "gcMs": 1156,
+        "gcCount": 102,
+        "jitMs": 19169,
+        "c2Ms": 19169,
+        "downloadMs": 99132,
+        "downloadBytes": 131603049,
+        "downloadCount": 752,
+        "moduleCount": 7,
+        "slowestMojo": {
+          "plugin": "org.apache.maven.plugins:maven-compiler-plugin",
+          "goal": "compile",
+          "phase": "compile",
+          "executionId": "default-compile",
+          "moduleKey": "com.google.code.gson:gson:2.14.1-SNAPSHOT",
+          "durationMs": 10852
+        },
+        "slowestTest": {
+          "className": "com.google.gson.functional.DefaultTypeAdaptersTest",
+          "methodName": "testDateSerializationWithStyle",
+          "displayName": "testDateSerializationWithStyle(com.google.gson.functional.DefaultTypeAdaptersTest)",
+          "framework": "JUNIT4",
+          "durationMs": 142
+        },
+        "testCount": 20,
+        "testMs": 922,
+        "issueCount": 0,
+        "issueSeverities": {},
+        "environment": {
+          "availableProcessors": 4,
+          "cpuCores": 2,
+          "cpuThreads": 4,
+          "memoryBytes": 16765378560,
+          "osName": "DISTRIB_ID=Ubuntu",
+          "jvmName": "OpenJDK 64-Bit Server VM",
+          "jvmVendor": "Eclipse Adoptium",
+          "mvnd": false,
+          "githubActions": true,
+          "c2DisabledBy": null
+        }
+      },
+      "summarySource": "html",
+      "compressed": false,
+      "bytes": 1811107
+    }
+  ]
+}

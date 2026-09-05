@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "repository": "mvn-perf/gson",
+  "serverUrl": "https://github.com",
+  "runId": 33985510138,
+  "runNumber": 4,
+  "runAttempt": 1,
+  "workflowRef": "mvn-perf/gson/.github/workflows/build.yml@refs/heads/build-monitor",
+  "jobKey": "build",
+  "jobId": 101358166339,
+  "jobName": "Build on JDK 21",
+  "jobUrl": "https://github.com/mvn-perf/gson/actions/runs/33985510138/job/101358166339",
+  "runnerName": "GitHub Actions 1000001632",
+  "stepNumber": 5,
+  "stepName": "Build with Maven",
+  "stepResolution": "job-name/report-time",
+  "label": null,
+  "key": "j101358166339-s5",
+  "collectedAt": "2026-09-05T18:57:09.708Z",
+  "reports": [
+    {
+      "file": "report.html",
+      "originalPath": "target/mvnlens/report.html",
+      "label": null,
+      "summary": {
+        "schemaVersion": 1,
+        "groupId": "com.google.code.gson",
+        "artifactId": "gson-parent",
+        "version": "2.14.1-SNAPSHOT",
+        "goals": [
+          "verify",
+          "javadoc:jar"
+        ],
+        "threads": 1,
+        "builderId": "singlethreaded",
+        "mavenVersion": "3.9.16",
+        "jdkVersion": "21.0.12.1",
+        "status": "OK",
+        "startedAt": 1788634512016,
+        "endedAt": 1788634627102,
+        "totalMs": 116255,
+        "wallMs": 115086,
+        "cpuMs": 51848,
+        "gcMs": 1568,
+        "gcCount": 114,
+        "jitMs": 48219,
+        "c2Ms": 48219,
+        "downloadMs": 72345,
+        "downloadBytes": 154179416,
+        "downloadCount": 798,
+        "moduleCount": 8,
+        "slowestMojo": {
+          "plugin": "org.codehaus.mojo:exec-maven-plugin",
+          "goal": "java",
+          "phase": "package",
+          "executionId": "r8",
+          "moduleKey": "com.google.code.gson:test-shrinker:2.14.1-SNAPSHOT",
+          "durationMs": 25157
+        },
+        "slowestTest": {
+          "className": "com.google.gson.protobuf.functional.ProtosWithAnnotationsAndJsonNamesTest",
+          "methodName": "testProtoWithAnnotationsAndJsonNames_unannotatedField",
+          "displayName": "testProtoWithAnnotationsAndJsonNames_unannotatedField(com.google.gson.protobuf.functional.ProtosWithAnnotationsAndJsonNamesTest)",
+          "framework": "JUNIT4",
+          "durationMs": 169
+        },
+        "testCount": 20,
+        "testMs": 1119,
+        "issueCount": 0,
+        "issueSeverities": {},
+        "environment": {
+          "availableProcessors": 4,
+          "cpuCores": 16,
+          "cpuThreads": 4,
+          "memoryBytes": 16766414848,
+          "osName": "DISTRIB_ID=Ubuntu",
+          "jvmName": "OpenJDK 64-Bit Server VM",
+          "jvmVendor": "Eclipse Adoptium",
+          "mvnd": false,
+          "githubActions": true,
+          "c2DisabledBy": null
+        }
+      },
+      "summarySource": "html",
+      "compressed": false,
+      "bytes": 1831845
+    }
+  ]
+}

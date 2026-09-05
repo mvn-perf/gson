@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "repository": "mvn-perf/gson",
+  "serverUrl": "https://github.com",
+  "runId": 33985510138,
+  "runNumber": 4,
+  "runAttempt": 1,
+  "workflowRef": "mvn-perf/gson/.github/workflows/build.yml@refs/heads/build-monitor",
+  "jobKey": "native-image-test",
+  "jobId": 101358166185,
+  "jobName": "GraalVM Native Image test (JDK 25)",
+  "jobUrl": "https://github.com/mvn-perf/gson/actions/runs/33985510138/job/101358166185",
+  "runnerName": "GitHub Actions 1000001627",
+  "stepNumber": 5,
+  "stepName": "Build and run tests",
+  "stepResolution": "job-name/report-time",
+  "label": null,
+  "key": "j101358166185-s5",
+  "collectedAt": "2026-09-05T18:57:06.584Z",
+  "reports": [
+    {
+      "file": "report.html",
+      "originalPath": "target/mvnlens/report.html",
+      "label": null,
+      "summary": {
+        "schemaVersion": 1,
+        "groupId": "com.google.code.gson",
+        "artifactId": "gson-parent",
+        "version": "2.14.1-SNAPSHOT",
+        "goals": [
+          "test"
+        ],
+        "threads": 1,
+        "builderId": "singlethreaded",
+        "mavenVersion": "3.9.16",
+        "jdkVersion": "25.0.4",
+        "status": "OK",
+        "startedAt": 1788634516138,
+        "endedAt": 1788634624233,
+        "totalMs": 108349,
+        "wallMs": 108094,
+        "cpuMs": 17278,
+        "gcMs": 488,
+        "gcCount": 54,
+        "jitMs": 2348,
+        "c2Ms": 2348,
+        "downloadMs": 1454,
+        "downloadBytes": 0,
+        "downloadCount": 2,
+        "moduleCount": 3,
+        "slowestMojo": {
+          "plugin": "org.graalvm.buildtools:native-maven-plugin",
+          "goal": "test",
+          "phase": "test",
+          "executionId": "test-native",
+          "moduleKey": "com.google.code.gson:test-graal-native-image:2.14.1-SNAPSHOT",
+          "durationMs": 81947
+        },
+        "slowestTest": {
+          "className": "com.google.gson.functional.DefaultTypeAdaptersTest",
+          "methodName": "testDateSerializationWithStyle",
+          "displayName": "testDateSerializationWithStyle(com.google.gson.functional.DefaultTypeAdaptersTest)",
+          "framework": "JUNIT4",
+          "durationMs": 150
+        },
+        "testCount": 20,
+        "testMs": 742,
+        "issueCount": 0,
+        "issueSeverities": {},
+        "environment": {
+          "availableProcessors": 4,
+          "cpuCores": 16,
+          "cpuThreads": 4,
+          "memoryBytes": 16766414848,
+          "osName": "DISTRIB_ID=Ubuntu",
+          "jvmName": "Java HotSpot(TM) 64-Bit Server VM",
+          "jvmVendor": "Oracle Corporation",
+          "mvnd": false,
+          "githubActions": true,
+          "c2DisabledBy": null
+        }
+      },
+      "summarySource": "html",
+      "compressed": false,
+      "bytes": 1760848
+    }
+  ]
+}
